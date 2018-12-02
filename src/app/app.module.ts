@@ -4,6 +4,9 @@ import { NgModule } from "@angular/core";
 //Router
 import { APP_ROUTING } from "./app.routes";
 
+//Services
+import { HeroService } from "./services/hero.service";
+
 //Components
 import { AppComponent } from "./app.component";
 import { NavbarComponent } from "./components/shared/navbar/navbar.component";
@@ -20,7 +23,7 @@ import { AboutComponent } from "./components/about/about.component";
     AboutComponent
   ],
   imports: [BrowserModule, APP_ROUTING],
-  providers: [],
+  providers: [HeroService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
