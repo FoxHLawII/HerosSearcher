@@ -66,6 +66,10 @@ export class HeroService {
   public getAllHeros = (): Hero[] => {
     return this.heros;
   };
+
+  public getHeroByPos = index => {
+    return this.heros[index];
+  };
 }
 
 export interface Hero {
