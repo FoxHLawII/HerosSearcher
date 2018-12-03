@@ -13,6 +13,7 @@ import { NavbarComponent } from "./components/shared/navbar/navbar.component";
 import { HomeComponent } from "./components/home/home.component";
 import { HerosComponent } from "./components/heros/heros.component";
 import { AboutComponent } from "./components/about/about.component";
+import { HeroComponent } from './components/hero/hero.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { AboutComponent } from "./components/about/about.component";
     NavbarComponent,
     HomeComponent,
     HerosComponent,
-    AboutComponent
+    AboutComponent,
+    HeroComponent
   ],
   imports: [BrowserModule, APP_ROUTING],
   providers: [HeroService],

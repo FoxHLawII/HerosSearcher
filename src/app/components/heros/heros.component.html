@@ -1,12 +1,14 @@
 <h1 class="animated fadeIn fast">Heros</h1>
 <hr>
 <div class="card-columns">
-    <div *ngFor="let hero of heros" class="card">
-        <img class="card-img-top" src="{{ hero.img }}" alt="Card image cap">
-        <div class="card-body">
-            <h5 class="card-title">{{ hero.nombre }}</h5>
-            <p class="card-text">{{ hero.bio }}</p>
-            <p class="card-text"><small class="text-muted">{{ hero.aparicion }}</small></p>
-        </div>
+    <div *ngFor="let hero of heros; let i = index;" class="card">
+        <a [routerLink]="['/hero', i]">
+            <img class="card-img-top" src="{{ hero.img }}" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">{{ hero.nombre }}</h5>
+                <p class="card-text">{{ hero.bio }}</p>
+                <p class="card-text"><small class="text-muted">{{ hero.aparicion }}</small></p>
+            </div>
+        </a>
     </div>
 </div>
